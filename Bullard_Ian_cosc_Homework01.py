@@ -4,9 +4,11 @@
 # HW 01
 # Lab Section: 14
 # Sources, people worked with, help given to: Bounced ideas around with Patrick McGrath
-# your
-# comments
-# here
+# If to do it again I would do it like done at the bottom, (Like Patrick), as then it negates a lot of the manual inserts and
+# allows for less data entry mistakes.
+# For the sake of the assignment though I did not copy and left it how I did it.
+
+
 # Homework Question:
 #
 # You are given a list of dictionaries where each dictionary represents a student and their scores in different subjects.
