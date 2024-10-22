@@ -16,5 +16,7 @@ morse_code_letters ={
     'Z': '--..'
 }
 
-
-input()
+message = "Insert what you want translated into morse code.\n"
+morse_string = input(message)
+for letter in morse_string:
+    morse_string.get()
