@@ -18,12 +18,13 @@ morse_code_letters ={
 
 message = "Insert what you want translated into morse code.\n"
 morse_string = input(message)
-translation = []
+translation = " "
 morse_string = morse_string.upper()
 for letter in morse_string:
     if (letter in morse_code_letters):
-        translation.append(morse_code_letters.get(letter))
+        translation += (morse_code_letters.get(letter))
+        translation += " "
     else:
-        translation.append("  ")
+        translation += "   "
 
 print(translation)
