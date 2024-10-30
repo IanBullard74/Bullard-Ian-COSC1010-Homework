@@ -3,7 +3,7 @@
 # Submission Date 10/22/24
 # HW 02
 # Lab Section: 14
-# Sources, people worked with, help given to: 
+# Sources, people worked with, help given to: Patrick McGrath and I worked together
 # your
 # comments
 # here
