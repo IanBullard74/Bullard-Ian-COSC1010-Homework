@@ -31,6 +31,10 @@ def valid_date(month, day, year):
         month_index = (month - 1)
         if day > days_month[month_index]:
             return "Invalid Date"
+        elif day == 0:
+            return "Invalid Date"
+        elif month == 0:
+            return "Invalid Date"
         else:
             return month_index
 
@@ -74,29 +78,45 @@ days_total = 0
 
 try:
     days_total = sum(days_month[:month_index]) + day
+    final_day = (days_total)%7
+
+    if 0 <= final_day < 1:
+        weekday = "Sunday"
+    elif 1 <= final_day < 2:
+        weekday = "Monday"
+    elif 2 <= final_day < 3:
+        weekday = "Tuesday"
+    elif 3 <= final_day < 4:
+        weekday = "Wednesday"
+    elif 4 <= final_day < 5:
+        weekday = "Thursday"
+    elif 5 <= final_day < 6:
+        weekday = "Friday"
+    elif final_day >= 6:
+        weekday = "Saturday"
+
+    print(weekday)
 except TypeError:
     print("Invalid Date")
 
 
 #print(days_total)
 
-final_day = (days_total)%7
+# final_day = (days_total)%7
 
+# if 0 <= final_day < 1:
+#     weekday = "Sunday"
+# elif 1 <= final_day < 2:
+#     weekday = "Monday"
+# elif 2 <= final_day < 3:
+#     weekday = "Tuesday"
+# elif 3 <= final_day < 4:
+#     weekday = "Wednesday"
+# elif 4 <= final_day < 5:
+#     weekday = "Thursday"
+# elif 5 <= final_day < 6:
+#     weekday = "Friday"
+# elif final_day >= 6:
+#     weekday = "Saturday"
 
-
-if 0 <= final_day < 1:
-    weekday = "Sunday"
-elif 1 <= final_day < 2:
-    weekday = "Monday"
-elif 2 <= final_day < 3:
-    weekday = "Tuesday"
-elif 3 <= final_day < 4:
-    weekday = "Wednesday"
-elif 4 <= final_day < 5:
-    weekday = "Thursday"
-elif 5 <= final_day < 6:
-    weekday = "Friday"
-elif final_day >= 6:
-    weekday = "Saturday"
-
-print(weekday)
+# print(weekday)
