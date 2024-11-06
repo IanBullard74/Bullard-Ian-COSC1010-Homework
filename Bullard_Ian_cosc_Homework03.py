@@ -43,25 +43,37 @@ day = int(split_date[1])
 year = int(split_date[2])
 
 month_index = valid_date(month, day, year)
-print(month_index)
+#print(month_index)
 day_of_week = first_day_of_Jan(year)
 
 
 if 0 < day_of_week < 1:
-    weekday = "Sunday"
+    weekday_of_jan1 = "Sunday"
 elif 1 < day_of_week < 2:
-    weekday = "Monday"
+    weekday_of_jan1 = "Monday"
 elif 2 < day_of_week < 3:
-    weekday = "Tuesday"
+    weekday_of_jan1 = "Tuesday"
 elif 3 < day_of_week < 4:
-    weekday = "Wednesday"
+    weekday_of_jan1 = "Wednesday"
 elif 4 < day_of_week < 5:
-    weekday = "Thursday"
+    weekday_of_jan1 = "Thursday"
 elif 5 < day_of_week < 6:
-    weekday = "Friday"
+    weekday_of_jan1 = "Friday"
 elif day_of_week > 6:
-    weekday = "Saturday"
+    weekday_of_jan1 = "Saturday"
 
-print(weekday)
+#print(weekday_of_jan1)
 
+
+if leap_year(year) == True:
+    days_month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30 ,31]
+else:
+    days_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30 ,31]
+
+days_total = 0
+
+days_total = sum(days_month[:month_index]) + day
+
+
+#print(days_total)
 
