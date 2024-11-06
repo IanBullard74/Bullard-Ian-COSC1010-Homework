@@ -72,8 +72,31 @@ else:
 
 days_total = 0
 
-days_total = sum(days_month[:month_index]) + day
+try:
+    days_total = sum(days_month[:month_index]) + day
+except TypeError:
+    print("Invalid Date")
 
 
 #print(days_total)
 
+final_day = (days_total)%7
+
+
+
+if 0 <= final_day < 1:
+    weekday = "Sunday"
+elif 1 <= final_day < 2:
+    weekday = "Monday"
+elif 2 <= final_day < 3:
+    weekday = "Tuesday"
+elif 3 <= final_day < 4:
+    weekday = "Wednesday"
+elif 4 <= final_day < 5:
+    weekday = "Thursday"
+elif 5 <= final_day < 6:
+    weekday = "Friday"
+elif final_day >= 6:
+    weekday = "Saturday"
+
+print(weekday)
