@@ -1,7 +1,7 @@
 # Bullard-Ian-COSC1010-Homework
 # [Ian Bullard]
-## [Homework 1 ]
-## [Submission date: 10/14/24]
+## [Homework 3 ]
+## [Submission date: 11/05/24]
 ## Worked with/sources 
 * Patrick McGrath
 
