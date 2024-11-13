@@ -34,7 +34,37 @@
 # You will be outputting a VERY recognizable ASCII art with this. If you are looking at the output file and you aren't sure what it is, you are likely doing it incorrectly. It can help if you zoom out on your output file.
 
 
-from pathlib import Path 
+from pathlib import Path
 path = Path('prompt.txt')
 contents = path.read_text()
-print(contents)
+lines = contents.splitlines()
+out = ""
+#print(lines)
+key_value_dict = {}
+for line in lines:
+    #print(line)
+    pairings = line.split("\t")
+    
+
+    #print(pairings)
+
+    for pair in pairings:
+        #print(pair)
+        key, sep, value = pair.partition(":")
+        
+        if sep == ":" and value:
+            value = int(value.strip())
+            key_value_dict[key.strip()] = value
+        #print(key)
+        #print(value)
+            
+
+        if key.strip() == "w":
+            out = " " * value + out
+            #print(f' Adding {value} spaces')
+        elif key.strip() == "*":
+            out = "*" * value + out
+            #print(f' Adding {value} astericks')
+#print(len(out))
+output_path = Path('output.txt')
+output_path.write_text(out)
