@@ -1,4 +1,10 @@
-
+# Ian Bullard
+# UWYO COSC 1010
+# 11/19/24
+# HW 05
+# Lab Section: 14
+# Sources, people worked with, help given to: Bounced ideas around with Patrick McGrath
+# Asked ChatGPT how to get the AA-AF columns to work becasuse that was the only stuff not printing correctly
 import openpyxl
 
 from openpyxl.styles import Color, PatternFill
